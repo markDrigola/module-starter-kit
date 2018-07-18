@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document test</title>
+</head>
+<body>
+
+<h1>Test html</h1>
+
+<script>
+    'use strict';
+
+    class Test {
+        constructor() {
+            debugger
+            this.test2();
+            debugger
+        }
+
+        static async test() {
+            debugger
+            let test = await Test.prom();
+            debugger
+        }
+
+        static prom() {
+            debugger
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(true)
+                }, 3000)
+            })
+            debugger
+        }
+
+        async test2() {
+            debugger
+            let test = await foo();
+            // let test = await this.prom2();
+            debugger
+        }
+
+        prom2() {
+            debugger
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(true)
+                }, 3000)
+            })
+            debugger
+        }
+    }
+
+    function foo() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(true)
+            }, 3000)
+        })
+    }
+
+
+
+    // debugger
+    // let b = Test.test();
+    debugger
+    let t = new Test();
+    debugger
+
+</script>
+</body>
+</html>
